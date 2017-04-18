@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+body {
+	background:#96b6d2;
+	background-image:url(../image/xk.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow:hidden;
+}
+.content {
+	width: 28%;
+    height: 50%;
+    margin: 5% 70%;
+    background: #bfcbd8;
+    background: rgba(84, 144, 218, 0.35);
+    border-radius: 6px;
+}
+
+.content .logo {
+	text-align: center;
+	line-height: 90px; 
+	color: #fff;
+	font-size:30px;
+	position: relative;
+   	top: 26px;
+}
+
+
+.content .inputBox {
+	height: 30px;
+   	opacity: 0.6;
+   	margin-top:30px;
+}
+.content .denglu {
+   	margin-top:30px;
+}
+.content .inputBox input{
+	width: 280px;
+    height: 50px;
+    margin-left: 49px;
+    padding-left: 16px;
+    line-height: 38px;
+    font-size: 22px;
+    background: #e2e9f9;
+    color: #464242;
+    border: none;
+    border-radius: 2px;
+}
+
+.content .login_btn{
+    width: 77%;
+    height: 46px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-left: 13%;
+    font-family: Times New Roman;
+    background: #458fce;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.content .login_btn:hover {
+	 background: #3499da;
+}
+
+.show {
+	width:600px;
+	height:400px;
+	position:absolute;
+	left:100px;
+	top:60px;
+}
+
+
+

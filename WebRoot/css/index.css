@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+*{
+	padding:0px;
+	margin:0px;
+}
+ul li {
+    list-style: none ;
+}
+a {
+    color: #fff ;
+    text-decoration: none ;
+}
+.header{
+	height:60px;
+	width: 100%;
+	position: fixed;
+	background:#458fce;
+	z-index: 99999;
+    margin-top: -5px;
+}
+.header .logo{
+	height:60px;
+	width:5%;
+	float: left;
+}
+.imglogo{
+	height:60px;
+	width:100%;
+}
+
+.header .guide{
+	height:60px;
+	width:76%;
+	float: left;
+	padding-right:0px;
+	background:#458fce;
+}
+.header .guide ul{
+	height:60px;
+	width:46%%;
+	/* margin-left: 2%; */
+}
+.header .guide ul li {
+	height:60px;
+	width:150px;
+    float: left ;
+    color: #fff ;
+    text-align: center ;
+    display:inline-block;
+    line-height:60px;
+    cursor:pointer;
+}
+.header .guide ul li:hover {
+    background:#74b0e2;
+}
+.header .login{
+	height:60px;
+	width:95%;
+	padding-right:0px;
+	background:#458fce;
+}
+.header .login span{
+	height:60px;
+	width:20px;
+    float: right ;
+    color: #fff ;
+    text-align: center ;
+    display:inline-block;
+    line-height:60px;
+}
+.header .login .dz{
+	height:30px;
+	width:50px;
+    float: right ;
+    color: #fff ;
+    text-align: center ;
+    display:inline-block;
+    margin-top:15px;
+    line-height:30px;
+    cursor:pointer;
+}
+.header .login .dz:hover{
+	background:#74b0e2;
+}
+.banner {
+    height: 380px ;
+    overflow: hidden ;
+    background: #ccc;
+}
+.bottom{
+	/* height: 380px ; */
+    overflow: hidden ;
+    /* background: #b9aaee; */
+}
+#qrcode{
+	height:256px;
+	width:256px;
+}
+/*文章类型*/
+.category {
+    margin-top: 10px;
+    margin-bottom:20px;
+}
+.category .title {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cac5c5;
+    height: 30px;
+    text-indent:1em;
+    font-size:18px;
+    color:#666;
+}
+.category .items {
+    margin-left:10px;
+    border-bottom: 1px solid #cac5c5;
+}
+.category .items .item {
+    width: 160px;
+    height: 231px;
+    background: #ccc;
+    background-size:100% 100%;
+    margin: 20px;
+    float: left;
+    margin-right:20px;
+    cursor:pointer;
+}
+.category .items .item:hover{
+	transform: scale(1.05);
+}
