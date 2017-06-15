@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.UUID;
 
+import org.junit.Test;
+
 import bean.userbean;
 import util.DataBaseUtils;
 import util.IDnewUtils;
@@ -62,6 +64,7 @@ public class TestProperties {
 	    userbean user = DataBaseUtils.queryForBean("select * from t_user  limit 1", userbean.class);
 	    System.out.println(user);
 	}
+	
 	public static void readproperties(){
 		InputStream inputStream =  TestProperties.class.getClassLoader().getResourceAsStream("jdbc.properties");
 //		FileInputStream in = new FileInputStream("jdbc.properties");

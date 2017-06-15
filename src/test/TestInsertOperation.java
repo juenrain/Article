@@ -39,7 +39,7 @@ public class TestInsertOperation {
 	public void getArticle(){
 	    String sql = "select * from t_article where id = ?";
 	    Article article = DataBaseUtils.queryForBean(sql, Article.class, "1ddd7187-0c40-452c-a799-536dd3c73ff3");
-	    System.out.println(article);
+	    System.out.println("读取文章："+article);
 	}
 	/**
 	 * 获取分类列表
@@ -48,6 +48,6 @@ public class TestInsertOperation {
 	public void getCategoryList(){
 	    String sql = "select * from t_category where 1 = 1";
 	    List list = DataBaseUtils.queryForList(sql);
-	    System.out.println(list);
+	    System.out.println("文章分类："+list);
 	}
 }

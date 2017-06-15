@@ -23,6 +23,7 @@ public class DataBaseUtils {
 	private static String username; //用户名
 	private static String password; //密码
 	private static String dataBaseName; //数据库名
+	private static String driverUrl;//url地址
 	static{
 		config("jdbc.properties");
 	}
@@ -38,6 +39,7 @@ public class DataBaseUtils {
 	        username = p.getProperty("db.username");
 	        password = p.getProperty("db.password");
 	        dataBaseName = p.getProperty("db.dataBaseName");
+	        driverUrl = p.getProperty("db.driverUrl");
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }
@@ -55,7 +57,8 @@ public class DataBaseUtils {
 	    Connection connection = null;
 	    try {
 	        Class.forName("com.mysql.jdbc.Driver");
-	        connection  = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+dataBaseName+"?useUnicode=true&characterEncoding=utf8&useSSL=false",username,password);
+//	        connection  = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+dataBaseName+"?useUnicode=true&characterEncoding=utf8&useSSL=false",username,password);
+	        connection  = DriverManager.getConnection(""+driverUrl+""+dataBaseName+"?useUnicode=true&characterEncoding=utf8&useSSL=false",username,password);
 	    } catch (ClassNotFoundException e) {
 	        e.printStackTrace();
 	    } catch (SQLException e) {
