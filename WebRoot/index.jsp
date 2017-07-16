@@ -48,9 +48,9 @@
 		    <span class="dz"><a href="javascript:void(0)">注册</a></span> -->
 		    <c:choose>
 		        <c:when  test="${empty sessionScope.username}">
-		            <span class="dz"><a id="name" href="login.jsp">登陆</a></span>  
+		            <span class="dz"><a id="name" href="jsp/login.jsp">登陆</a></span>  
 		            <span>|</span>
-		            <span class="dz"><a href="javascript:void(0)">注册</a></span>
+		            <span class="dz"><a href="jsp/signup.jsp">注册</a></span>
 		        </c:when>
 		        <c:otherwise>
 		            <span class="dz"><a id="name" href="javascript:void(0)">${sessionScope.username}</a></span>  

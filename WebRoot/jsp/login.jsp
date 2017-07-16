@@ -42,7 +42,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	//初始化页面加载信息
 	$(document).ready(function(){
 		qrload();
-		$(".login").css("display","none");
+		$("#denglu").css("display","none");
+		$("#0").css("display","none");
 	});  
   function login(){
   	var username = $("#username").val();
