@@ -44,33 +44,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		qrload();
 		$("#denglu").css("display","none");
 		$("#0").css("display","none");
+		$("body").bind('keyup',function(event) {  
+    		if(event.keyCode==13){  
+        		login();  
+    		}     
+		});  
 	});  
-  function login(){
-  	var username = $("#username").val();
-  	var password = $("#password").val();
-  	$.ajax({
-        type:"post",
-        url:"controller/loginController.jsp",
-        data:{username:username,password:password},
-        async:false,
-        error:function(){
-            alert("登陆出错！");
-        },
-        success:function(data){
-            if(data == -1){
-                    alert('用户名和密码不能为空！');
-                }else if(data == -2){
-                    alert('用户名不存在！');
-                }else if(data == -3){
-                    alert('用户名或密码错误！');
-                }else{
-                    //登录成功后返回首页
-                    window.location.href = "${basePath}";
-                    /* window.location.href = "index.jsp";  */
-                }
-        }
-    });
-  }
+	 function login(){
+	  	var username = $("#username").val();
+	  	var password = $("#password").val();
+	  	$.ajax({
+	        type:"post",
+	        url:"controller/loginController.jsp",
+	        data:{username:username,password:password},
+	        async:false,
+	        error:function(){
+	            alert("登陆出错！");
+	        },
+	        success:function(data){
+	            if(data == -1){
+	                    alert('用户名和密码不能为空！');
+	                }else if(data == -2){
+	                    alert('用户名不存在！');
+	                }else if(data == -3){
+	                    alert('用户名或密码错误！');
+	                }else{
+	                    //登录成功后返回首页
+	                    window.location.href = "${basePath}";
+	                    /* window.location.href = "index.jsp";  */
+	                }
+	        }
+	    });
+	  }
   function qrload(){
 		/* new QRCode(document.getElementById('qrcode'), 'your content');
 		qrcode.makeCode(this.value); */

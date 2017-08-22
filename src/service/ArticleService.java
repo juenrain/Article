@@ -13,7 +13,7 @@ public class ArticleService {
 	 * @param end  
 	 */
 	public static List<Map<String,Object>> getArticlesByCategoryId(Integer categoryId,Integer start,Integer end){
-	    String sql = "select id,header,name,author,"
+	    String sql = "select t_article_key,header,name,author,"
 	        + "description from t_article where 1 = 1 "
 	        + " and is_delete = 0"
 	        + " and is_published = 1"
@@ -27,7 +27,7 @@ public class ArticleService {
 	 * @return
 	 */
 	public List<Map<String,Object>> getContentByArticleId(String id){
-	    String sql = "select content from t_article where id = ?";
+	    String sql = "select content from t_article where t_article_key = ?";
 	    return DataBaseUtils.queryForList(sql,id);
 	}
 }

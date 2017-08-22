@@ -5,6 +5,7 @@ body {
 *{
     margin:0;
     padding:0;
+    color:white;
 }
 /*常用标签的样式重置*/
 i{
@@ -12,6 +13,7 @@ i{
 }
 a{
     text-decoration: none;
+    color:#FF0000;
 }
 input{
     outline: none;
@@ -59,7 +61,7 @@ html,body{
     font-weight:bold;
 }
 .header .tologin{
-	color: rgb(251, 255, 235);
+	color: rgb(251, 255, 235);/* #FF0000 */
     font-size: 18px;
     line-height: 34px;
     position: absolute;
@@ -68,6 +70,9 @@ html,body{
     padding-left: 20px;
     font-weight:bold;
 }
+/* .header .tologin a{
+	color:#FF0000;
+} */
 /*-----------------------------------京东注册模块---------------------------*/
 .register{
 	width: 400px;

@@ -2,6 +2,7 @@
 body {
 	background:#96b6d2;
 	background-image:url(../image/xk.jpg);
+	background-size:100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -30,14 +31,16 @@ body {
 	height: 30px;
    	opacity: 0.6;
    	margin-top:30px;
+   	text-align:center
 }
 .content .denglu {
    	margin-top:30px;
+   	text-align:center
 }
 .content .inputBox input{
-	width: 280px;
+	width: 75%;
     height: 50px;
-    margin-left: 49px;
+    /* margin-left: 49px; */
     padding-left: 16px;
     line-height: 38px;
     font-size: 22px;
@@ -48,12 +51,12 @@ body {
 }
 
 .content .login_btn{
-    width: 77%;
+    width: 75%;
     height: 46px;
     font-size: 20px;
     text-align: center;
     color: #fff;
-    margin-left: 13%;
+    /* margin-left: 13%; */
     font-family: Times New Roman;
     background: #458fce;
     border-radius: 3px;

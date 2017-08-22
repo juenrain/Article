@@ -1,4 +1,4 @@
-function $(id) {
+function findID(id) {
 	return document.getElementById(id);
 }
 // 中文、字母、数字、_ - 4-20
@@ -15,13 +15,13 @@ window.onload = function() {
 	// 用户名字母、数字、_、-、中文  \u4e00-\u9fa5  4-20
 	// box   常规 box  出错的时候  box error  正确的时候  box right
 	// tip   常规 tip hide  出错的时候  tip error  默认的时候  tip default
-	var userName = $("userName");
-	var pwd = $("pwd");
-	var pwd2 = $("pwd2");
-	var email = $("email");
-	var mobile = $("mobile");
-	var ck = $("ck");
-	var btn = $("btn");
+	var userName = findID("userName");
+	var pwd = findID("pwd");
+	var pwd2 = findID("pwd2");
+	var email = findID("email");
+	var mobile = findID("mobile");
+	var ck = findID("ck");
+	var btn = findID("btn");
 
 	userName.onkeyup=userName.onfocus=userName.onblur=function(evt) {
 		var e = evt || window.event;
@@ -174,7 +174,27 @@ window.onload = function() {
 		var span = tip.lastElementChild;
 		if(ck.checked) {
 			if(checkUserName()&&checkPwd()&&checkPwd2()) {
-				alert("可以注册");
+//				alert("可以注册");
+				//将基本注册信息写入数据库
+				var userName_value = userName.value;
+				var pwd_value = pwd.value;
+				var pwd2_value = pwd2.value;
+				var email_value = email.value;
+				var mobile_value = mobile.value;
+//				alert(userName_value+"+"+pwd_value+"+"+pwd2_value+"+"+email_value+"+"+mobile_value);
+				$.ajax({
+			        type:"post",
+			        url:"signup_saveinfo",
+			        data:{username:userName_value,password:pwd_value,email:email_value,telephone:mobile_value},
+			        async:false,
+			        error:function(){
+			            alert("注册失败，请联系管理员！！！");
+			        },
+			        success:function(data){
+			           alert(data);
+			           window.location.href = "jsp/login.jsp";
+			        }
+			    });
 			} else {
 				return false;
 			}

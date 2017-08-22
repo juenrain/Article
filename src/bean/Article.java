@@ -8,8 +8,8 @@ import annotation.Table;
 @Table(tableName = "t_article")
 public class Article {
     
-    @Column(field = "id" , type = "varchar(100)" , primaryKey = true,defaultNull = false)
-    private String id; //主键
+    @Column(field = "t_article_key" , type = "varchar(100)" , primaryKey = true,defaultNull = false)
+    private String t_article_key; //主键
     
     @Column(field = "header" , type = "varchar(100)")
     private String header; //标题
@@ -27,40 +27,40 @@ public class Article {
     private String description; //概要
     
     @Column(field = "is_published" , type = "int(1)")
-    private Integer isPublished; //是否发布 0 未发布 1 发布
+    private Integer is_published; //是否发布 0 未发布 1 发布
     
     @Column(field = "is_delete" , type = "int(1)")
-    private Integer isDelete;      //是否删除   0 未删除 1 已删除
+    private Integer is_delete;      //是否删除   0 未删除 1 已删除
     
     @Column(field = "create_time" , type = "datetime")
-    private Date createTime;//创建时间
+    private Date create_time;//创建时间
     
-    @Column(field = "update_time" , type = "timestamp" , defaultNull = false)
-    private Date updateTime;//最后更新时间
+	@Column(field = "update_time" , type = "timestamp" , defaultNull = false)
+    private Date update_time;//最后更新时间
     
     @Column(field = "user_id" , type = "varchar(100)" , defaultNull = false)
-    private String userId;//作者id
+    private String user_id;//作者id
     
     @Column(field = "category_id" , type = "int(2)" , defaultNull = false)
-    private Integer categoryId;//分类ID
+    private Integer category_id;//分类ID
 
 	@Override
 	public String toString() {
-		return "Article [id=" + id + ", header=" + header + ", name=" + name
+		return "Article [t_article_key=" + t_article_key + ", header=" + header + ", name=" + name
 				+ ", content=" + content + ", author=" + author
 				+ ", description=" + description + ", isPublished="
-				+ isPublished + ", isDelete=" + isDelete + ", createTime="
-				+ createTime + ", updateTime=" + updateTime + ", userId="
-				+ userId + ", categoryId=" + categoryId + ", toString()="
+				+ is_published + ", isDelete=" + is_delete + ", createTime="
+				+ create_time + ", updateTime=" + update_time + ", userId="
+				+ user_id + ", categoryId=" + category_id + ", toString()="
 				+ super.toString() + "]";
 	}
 
-	public String getId() {
-		return id;
+	public String getT_article_key() {
+		return t_article_key;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setT_article_key(String t_article_key) {
+		this.t_article_key = t_article_key;
 	}
 
 	public String getHeader() {
@@ -103,52 +103,52 @@ public class Article {
 		this.description = description;
 	}
 
-	public Integer getIsPublished() {
-		return isPublished;
+	public Integer getIs_published() {
+		return is_published;
 	}
 
-	public void setIsPublished(Integer isPublished) {
-		this.isPublished = isPublished;
+	public void setIs_published(Integer is_published) {
+		this.is_published = is_published;
 	}
 
-	public Integer getIsDelete() {
-		return isDelete;
+	public Integer getIs_delete() {
+		return is_delete;
 	}
 
-	public void setIsDelete(Integer isDelete) {
-		this.isDelete = isDelete;
+	public void setIs_delete(Integer is_delete) {
+		this.is_delete = is_delete;
 	}
 
-	public Date getCreateTime() {
-		return createTime;
+    public Date getCreate_time() {
+		return create_time;
 	}
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
+	public void setCreate_time(Date create_time) {
+		this.create_time = create_time;
 	}
 
-	public Date getUpdateTime() {
-		return updateTime;
+	public Date getUpdate_time() {
+		return update_time;
 	}
 
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
+	public void setUpdate_time(Date update_time) {
+		this.update_time = update_time;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getUser_id() {
+		return user_id;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
 
-	public Integer getCategoryId() {
-		return categoryId;
+	public Integer getCategory_id() {
+		return category_id;
 	}
 
-	public void setCategoryId(Integer categoryId) {
-		this.categoryId = categoryId;
+	public void setCategory_id(Integer category_id) {
+		this.category_id = category_id;
 	}
 
     

@@ -104,8 +104,10 @@ public class DataBaseUtils {
      * DML操作
      * @param sql
      * @param objects
+     * @return success:success,fail:fail
      */
-    public static void wysql(String sql,Object...objects){
+    public static String wysql(String sql,Object...objects){
+    	String msg = "";
         Connection connection = getConnection();
         PreparedStatement statement = null;
         try {
@@ -114,11 +116,14 @@ public class DataBaseUtils {
                 statement.setObject(i+1, objects[i]);
             }
             statement.executeUpdate();
+            msg = "success";
         } catch (SQLException e) {
             e.printStackTrace();
+            msg = "fail";
         }finally{
             closeConnection(connection, statement, null);
         }
+		return msg;
     }
     
     /**
@@ -202,7 +207,8 @@ public class DataBaseUtils {
         //遍历Map
         for (String columnName : map.keySet()) {
             Method method = null;
-            String propertyName = StringUtils.columnToProperty(columnName); //属性名称
+//            String propertyName = StringUtils.columnToProperty(columnName); //属性名称
+            String propertyName = columnName; //属性名称
             
             try {
                 field = clazz.getDeclaredField(propertyName);

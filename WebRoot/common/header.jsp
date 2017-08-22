@@ -15,10 +15,10 @@
     		</ul>
     	</div>
     	<div class='login'>
-		    <span class="dz" id="denglu"><a href="jsp/login.jsp">登陆</a></span>  
+		    <!-- <span class="dz" id="denglu"><a href="jsp/login.jsp">登陆</a></span>  
 		    <span id="0">|</span> 
-		    <span class="dz" id="zhuce"><a href="jsp/signup.jsp">注册</a></span>
-		    <%-- <c:choose>
+		    <span class="dz" id="zhuce"><a href="jsp/signup.jsp">注册</a></span> -->
+		    <c:choose>
 		        <c:when  test="${empty sessionScope.username}">
 		            <span class="dz"><a href="login.jsp">登陆</a></span>  
 		            <span>|</span>
@@ -29,7 +29,7 @@
 		            <span> | </span>
 		            <span class="dz"><a href="controller/logoutController.jsp">登出</a></span>
 		        </c:otherwise>
-		    </c:choose> --%>
+		    </c:choose>
 		</div>
     	
     </div>

@@ -6,6 +6,7 @@
     pageContext.setAttribute("articles2", articles2);
 %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -43,9 +44,6 @@
     		</ul>
     	</div>
     	<div class='login'>
-		    <!-- <span class="dz"><a href="login.jsp">登陆</a></span>  
-		    <span>|</span> 
-		    <span class="dz"><a href="javascript:void(0)">注册</a></span> -->
 		    <c:choose>
 		        <c:when  test="${empty sessionScope.username}">
 		            <span class="dz"><a id="name" href="jsp/login.jsp">登陆</a></span>  
@@ -111,6 +109,11 @@
 	//初始化页面加载信息
 	$(document).ready(function(){
 		qrload();
+		/* var sessionValue = session.getAttribute("username");
+		if(sessionValue =="" || sessionValue ==null){
+    		alert("登陆失效，请重新登陆");
+    		window.location.href = "jsp/login.jsp";
+  		} */
 	});  
 	function qrload(){
 		/* new QRCode(document.getElementById('qrcode'), 'your content');

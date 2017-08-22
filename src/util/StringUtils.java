@@ -57,4 +57,13 @@ public class StringUtils {
 	    }
 	    return sb.toString();
 	}
+	
+	public static String toString(Object obj){
+		String str = "";
+		if(obj == null ){
+			return str;
+		}else{
+			return obj.toString();
+		}
+	}
 }
