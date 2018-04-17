@@ -58,6 +58,14 @@ public class StringUtils {
 	    return sb.toString();
 	}
 	
+	/**
+	 * 
+	 * @Description:原来的toString参数不能为空，重新封装之后为空返回"";
+	 * @param:
+	 * @return:
+	 * @author:Junerain
+	 * @time:2017年9月3日下午11:04:41
+	 */
 	public static String toString(Object obj){
 		String str = "";
 		if(obj == null ){
